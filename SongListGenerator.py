@@ -1,6 +1,8 @@
 import requests
+    
+apiKey = "AIzaSyAHkq-KHYajDFVMFH1BKIENxKKVV1EGYNw" # youtube api key
 
-def getChannelID(apiKey, username): # gives the channel ID
+def getChannelID(username): # gives the channel ID
     url = "https://www.googleapis.com/youtube/v3/channels"
     params = {
         "part": "id",
@@ -11,7 +13,7 @@ def getChannelID(apiKey, username): # gives the channel ID
     response = requests.get(url,params = params)
     return response.json()
     
-def searchForVideo(apiKey, channelID,query):
+def searchForVideo(channelID,query):
 
     url = "https://www.googleapis.com/youtube/v3/search"
     params = {
@@ -27,7 +29,7 @@ def searchForVideo(apiKey, channelID,query):
     
     return vidID
 
-def getVideo(apiKey, videoID):
+def getVideo(videoID):
     
     url = "https://www.googleapis.com/youtube/v3/videos"
     params = {
@@ -39,12 +41,9 @@ def getVideo(apiKey, videoID):
 
     return response.json()["items"][0]["snippet"]["description"]
 
-def SongList(apiKey): # returns this weeks best tracks
-    
-    apiKey = "My API Key" # youtube api key
-    
-    videoInfo = getVideo(apiKey,searchForVideo(apiKey,getChannelID(apiKey, "theneedledrop"),"Weekly Track Roundup: ")) # gives the description of the latest needledrop weekly video
-
+def SongList(): # returns this weeks best tracks
+        
+    videoInfo = getVideo(searchForVideo(getChannelID("theneedledrop"),"Weekly Track Roundup: ")) # gives the description of the latest needledrop weekly video
     videoInfo = videoInfo.splitlines()
 
     songList = [] 
@@ -71,9 +70,3 @@ def SongList(apiKey): # returns this weeks best tracks
             songList.append(video)
 
     return songList
-        
-
-
-    
-    
-    
