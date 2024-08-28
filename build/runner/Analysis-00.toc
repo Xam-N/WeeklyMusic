@@ -1,5 +1,5 @@
-(['C:\\Users\\Max\\Desktop\\Thesis Project\\WeeklyMusic\\runner.py'],
- ['C:\\Users\\Max\\Desktop\\Thesis Project\\WeeklyMusic'],
+(['C:\\Users\\Max\\Desktop\\GitHub\\WeeklyMusic\\runner.py'],
+ ['C:\\Users\\Max\\Desktop\\GitHub\\WeeklyMusic'],
  [],
  ['C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\numpy\\_pyinstaller',
   'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks',
@@ -24,7 +24,7 @@
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
    'PYSOURCE'),
   ('runner',
-   'C:\\Users\\Max\\Desktop\\Thesis Project\\WeeklyMusic\\runner.py',
+   'C:\\Users\\Max\\Desktop\\GitHub\\WeeklyMusic\\runner.py',
    'PYSOURCE')],
  [('subprocess',
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\subprocess.py',
@@ -495,8 +495,7 @@
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\datetime.py',
    'PYMODULE'),
   ('SpotifyPlaylistGenerator',
-   'C:\\Users\\Max\\Desktop\\Thesis '
-   'Project\\WeeklyMusic\\SpotifyPlaylistGenerator.py',
+   'C:\\Users\\Max\\Desktop\\GitHub\\WeeklyMusic\\SpotifyPlaylistGenerator.py',
    'PYMODULE'),
   ('requests',
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\requests\\__init__.py',
@@ -1282,7 +1281,7 @@
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\flask\\json\\__init__.py',
    'PYMODULE'),
   ('SongListGenerator',
-   'C:\\Users\\Max\\Desktop\\Thesis Project\\WeeklyMusic\\SongListGenerator.py',
+   'C:\\Users\\Max\\Desktop\\GitHub\\WeeklyMusic\\SongListGenerator.py',
    'PYMODULE')],
  [('python311.dll',
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\python311.dll',
@@ -1341,25 +1340,33 @@
   ('_asyncio.pyd',
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_asyncio.pyd',
    'EXTENSION'),
-  ('api-ms-win-crt-environment-l1-1-0.dll',
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
    'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-environment-l1-1-0.dll',
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-convert-l1-1-0.dll',
    'C:\\Coding '
    'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-convert-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-stdio-l1-1-0.dll',
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
    'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-conio-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-string-l1-1-0.dll',
    'C:\\Coding '
    'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-string-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-math-l1-1-0.dll',
+  ('api-ms-win-crt-environment-l1-1-0.dll',
    'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-math-l1-1-0.dll',
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-time-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-time-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-heap-l1-1-0.dll',
    'C:\\Coding '
@@ -1368,29 +1375,21 @@
   ('VCRUNTIME140.dll',
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\VCRUNTIME140.dll',
    'BINARY'),
-  ('api-ms-win-crt-time-l1-1-0.dll',
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
    'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-time-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-filesystem-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-stdio-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-locale-l1-1-0.dll',
    'C:\\Coding '
    'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-locale-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-conio-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-conio-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-runtime-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-runtime-l1-1-0.dll',
-   'BINARY'),
   ('api-ms-win-crt-process-l1-1-0.dll',
    'C:\\Coding '
    'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-math-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-crt-math-l1-1-0.dll',
    'BINARY'),
   ('libcrypto-1_1.dll',
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\libcrypto-1_1.dll',
@@ -1408,81 +1407,21 @@
   ('ucrtbase.dll',
    'C:\\Coding Languages\\Java\\jdk-18.0.2.1\\bin\\ucrtbase.dll',
    'BINARY'),
-  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+  ('api-ms-win-core-file-l1-2-0.dll',
    'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-file-l1-2-0.dll',
    'BINARY'),
   ('api-ms-win-core-processenvironment-l1-1-0.dll',
    'C:\\Coding '
    'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-processenvironment-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-handle-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-handle-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-synch-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-synch-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-file-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-file-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-rtlsupport-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-localization-l1-2-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-localization-l1-2-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-synch-l1-2-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-synch-l1-2-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-sysinfo-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-sysinfo-l1-1-0.dll',
-   'BINARY'),
   ('api-ms-win-core-util-l1-1-0.dll',
    'C:\\Coding '
    'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-util-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+  ('api-ms-win-core-handle-l1-1-0.dll',
    'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-namedpipe-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-debug-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-debug-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-profile-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-profile-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-timezone-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-timezone-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-file-l1-2-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-file-l1-2-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-processthreads-l1-1-1.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-processthreads-l1-1-1.dll',
-   'BINARY'),
-  ('api-ms-win-core-memory-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-memory-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-console-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-console-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-string-l1-1-0.dll',
-   'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-string-l1-1-0.dll',
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-handle-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-datetime-l1-1-0.dll',
    'C:\\Coding '
@@ -1492,6 +1431,66 @@
    'C:\\Coding '
    'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-heap-l1-1-0.dll',
    'BINARY'),
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-sysinfo-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-debug-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-memory-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-memory-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-profile-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-file-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-console-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-console-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+   'C:\\Coding '
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'BINARY'),
   ('api-ms-win-core-processthreads-l1-1-0.dll',
    'C:\\Coding '
    'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-processthreads-l1-1-0.dll',
@@ -1500,23 +1499,22 @@
    'C:\\Coding '
    'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-interlocked-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
    'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-rtlsupport-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-file-l2-1-0.dll',
+  ('api-ms-win-core-timezone-l1-1-0.dll',
    'C:\\Coding '
-   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-file-l2-1-0.dll',
+   'Languages\\Java\\jdk-18.0.2.1\\bin\\api-ms-win-core-timezone-l1-1-0.dll',
    'BINARY')],
  [],
  [],
  [('base_library.zip',
-   'C:\\Users\\Max\\Desktop\\Thesis '
-   'Project\\WeeklyMusic\\build\\runner\\base_library.zip',
-   'DATA'),
-  ('certifi\\py.typed',
-   'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\certifi\\py.typed',
+   'C:\\Users\\Max\\Desktop\\GitHub\\WeeklyMusic\\build\\runner\\base_library.zip',
    'DATA'),
   ('certifi\\cacert.pem',
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\certifi\\cacert.pem',
+   'DATA'),
+  ('certifi\\py.typed',
+   'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\certifi\\py.typed',
    'DATA')])

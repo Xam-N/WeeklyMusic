@@ -5,6 +5,7 @@ import threading
 import requests
 import base64
 import datetime
+import apiKeys
 
 app = flask.Flask(__name__)
 
@@ -12,9 +13,11 @@ authCode = None
 
 callback_event = threading.Event()
 
-clientID = '1e65a0ba27a9410f974dbcf7004c2fe0'
+clientID = apiKeys.spotifyClientID
+
+clientSecret = apiKeys.spotifyClientSecret
+
 redirectURI = 'http://localhost:8888/callback'
-clientSecret = "773e1b028ca4456385c8ea99c2270e3a"
 
 def tokenGen():
   
@@ -74,12 +77,10 @@ def createPlaylist(accessToken,playlistName):
     }
     data = {
         "name" : playlistName,
-        #"description": "New playlist description",
         "public" : False
     }
     
     response = requests.post(url,headers = header, json=data)
-    #print(response.json()['id'])
     return response.json()['id']
 
 def findSongID(songToSearch, accessToken):

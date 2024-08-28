@@ -1,6 +1,10 @@
 import requests
+import apiKeys
     
-apiKey = "AIzaSyAHkq-KHYajDFVMFH1BKIENxKKVV1EGYNw" # youtube api key
+channelName = "theneedledrop"
+videoName = "Weekly Track Roundup: "
+
+apiKey = apiKeys.youtubeApiKey
 
 def getChannelID(username): # gives the channel ID
     url = "https://www.googleapis.com/youtube/v3/channels"
@@ -43,7 +47,7 @@ def getVideo(videoID):
 
 def SongList(): # returns this weeks best tracks
         
-    videoInfo = getVideo(searchForVideo(getChannelID("theneedledrop"),"Weekly Track Roundup: ")) # gives the description of the latest needledrop weekly video
+    videoInfo = getVideo(searchForVideo(getChannelID(channelName),videoName)) # gives the description of the latest needledrop weekly video
     videoInfo = videoInfo.splitlines()
 
     songList = [] 

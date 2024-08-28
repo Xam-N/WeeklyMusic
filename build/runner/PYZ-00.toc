@@ -1,11 +1,9 @@
-('C:\\Users\\Max\\Desktop\\Thesis '
- 'Project\\WeeklyMusic\\build\\runner\\PYZ-00.pyz',
+('C:\\Users\\Max\\Desktop\\GitHub\\WeeklyMusic\\build\\runner\\PYZ-00.pyz',
  [('SongListGenerator',
-   'C:\\Users\\Max\\Desktop\\Thesis Project\\WeeklyMusic\\SongListGenerator.py',
+   'C:\\Users\\Max\\Desktop\\GitHub\\WeeklyMusic\\SongListGenerator.py',
    'PYMODULE'),
   ('SpotifyPlaylistGenerator',
-   'C:\\Users\\Max\\Desktop\\Thesis '
-   'Project\\WeeklyMusic\\SpotifyPlaylistGenerator.py',
+   'C:\\Users\\Max\\Desktop\\GitHub\\WeeklyMusic\\SpotifyPlaylistGenerator.py',
    'PYMODULE'),
   ('__future__',
    'C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__future__.py',
