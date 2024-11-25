@@ -1,2 +1,13 @@
 
 apiKeys.py
+__pycache__/apiKeys.cpython-311.pyc
+__pycache__/SongListGenerator.cpython-311.pyc
+__pycache__/SpotifyPlaylistGenerator.cpython-311.pyc
+build/runner/Analysis-00.toc
+build/runner/EXE-00.toc
+build/runner/PKG-00.toc
+build/runner/PYZ-00.pyz
+build/runner/PYZ-00.toc
+build/runner/runner.pkg
+build/runner/xref-runner.html
+dist/runner.exe
