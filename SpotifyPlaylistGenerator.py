@@ -29,6 +29,7 @@ def tokenGen():
   callback_event.wait()
   
   accessToken = getKey(authCode, redirectURI,clientID,clientSecret)['access_token']
+  print(accessToken)
   
   return accessToken
 

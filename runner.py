@@ -18,6 +18,7 @@ def runner():
   
   for song in songList:
     songID = SpotifyPlaylistGenerator.findSongID(song, accessToken).json()['tracks']['items'][0]['id']
+    #print("Here")
     SpotifyPlaylistGenerator.addSongToPlaylist(playlistID,songID,accessToken)
   
   os._exit(0)

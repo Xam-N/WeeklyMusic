@@ -28,10 +28,12 @@ def searchForVideo(channelID,query):
         "key":apiKey
     }
     response = requests.get(url,params=params)
-    
-    vidID = response.json()["items"][0]["id"]["videoId"]
-    
-    return vidID
+    for vid in response.json()['items']:
+        if 'youtube#video' in vid['id']['kind']:
+            return vid["id"]["videoId"]
+        else:
+            print("Not a video")
+    return "Error, no video found"
 
 def getVideo(videoID):
     
@@ -48,14 +50,16 @@ def getVideo(videoID):
 def SongList(): # returns this weeks best tracks
         
     videoInfo = getVideo(searchForVideo(getChannelID(channelName),videoName)) # gives the description of the latest needledrop weekly video
+    print(videoInfo)
     videoInfo = videoInfo.splitlines()
 
     songList = [] 
     song = False
 
     for video in videoInfo:
-            
-        if "BEST TRACKS" in video: # checks if in the best tracks section
+        #print(video)
+        if "BEST TRACK" in video: # checks if in the best tracks section
+            #print("Here")
             song = True
             continue
             
@@ -72,5 +76,5 @@ def SongList(): # returns this weeks best tracks
         
         if song == True and video != "":
             songList.append(video)
-
+    #print(songList)
     return songList
