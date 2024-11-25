@@ -11,3 +11,4 @@ build/runner/PYZ-00.toc
 build/runner/runner.pkg
 build/runner/xref-runner.html
 dist/runner.exe
+apiKeys.py
