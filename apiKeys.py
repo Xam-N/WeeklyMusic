@@ -1,0 +1,3 @@
+youtubeApiKey = ""
+spotifyClientID = ""
+spotifyClientSecret = ""
