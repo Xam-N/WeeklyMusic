@@ -15,10 +15,11 @@ def runner():
   playlistName = now.strftime("%d - %m")
   
   playlistID = SpotifyPlaylistGenerator.createPlaylist(accessToken, playlistName)
-  
+    
   for song in songList:
+    print(song)
     songID = SpotifyPlaylistGenerator.findSongID(song, accessToken).json()['tracks']['items'][0]['id']
-    #print("Here")
+    print(songID)
     SpotifyPlaylistGenerator.addSongToPlaylist(playlistID,songID,accessToken)
   
   os._exit(0)

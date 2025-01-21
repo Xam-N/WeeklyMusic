@@ -87,8 +87,10 @@ def createPlaylist(accessToken,playlistName):
 def findSongID(songToSearch, accessToken):
   year = datetime.date.today().strftime("%Y")
   url = "https://api.spotify.com/v1/search"
+
+  artistName, songTitle = songToSearch.split(" - ")
   params = {
-    "q" : songToSearch + "year:" + year,
+    "q": f"track:'{songTitle}' artist:'{artistName}' year:{year}",
     "type" : "track",
     "limit":"1"
   }
@@ -96,7 +98,6 @@ def findSongID(songToSearch, accessToken):
     "Authorization" : 'Bearer ' + accessToken
   }
   response = requests.get(url,params=params,headers=header)
-  #print(response)
   return response
 
 def addSongToPlaylist(playlistID, songID, accessToken):
@@ -110,3 +111,4 @@ def addSongToPlaylist(playlistID, songID, accessToken):
     }
     response = requests.post(url, headers=headers, json=data)
     return response
+
