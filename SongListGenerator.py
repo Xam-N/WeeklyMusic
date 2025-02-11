@@ -32,6 +32,7 @@ def searchForVideo(channelID,query):
         if 'youtube#video' in vid['id']['kind']:
             return vid["id"]["videoId"]
         else:
+            print(vid['id']['kind'])
             print("Not a video")
     return "Error, no video found"
 
@@ -50,7 +51,7 @@ def getVideo(videoID):
 def SongList(): # returns this weeks best tracks
         
     videoInfo = getVideo(searchForVideo(getChannelID(channelName),videoName)) # gives the description of the latest needledrop weekly video
-    print(videoInfo)
+    #print(videoInfo)
     videoInfo = videoInfo.splitlines()
 
     songList = [] 

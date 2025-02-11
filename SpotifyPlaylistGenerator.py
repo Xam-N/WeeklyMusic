@@ -88,16 +88,22 @@ def findSongID(songToSearch, accessToken):
   year = datetime.date.today().strftime("%Y")
   url = "https://api.spotify.com/v1/search"
 
-  artistName, songTitle = songToSearch.split(" - ")
+  artistName, songTitle = songToSearch.split(" - ", 1) #ensures that only 1 split takes place
+  if "ft." in songTitle:
+    #print(f"Removing featured artists {songTitle}")
+    songTitle = songTitle.split(" ft. ",1)[0]
+    #print(f"Removed featured artists {songTitle}")
+    
   params = {
-    "q": f"track:'{songTitle}' artist:'{artistName}' year:{year}",
+    "q": f"track:{songTitle} artist:{artistName} year:{year}",
     "type" : "track",
     "limit":"1"
   }
   header = {
-    "Authorization" : 'Bearer ' + accessToken
+    "Authorization":f"Bearer {accessToken}"
   }
   response = requests.get(url,params=params,headers=header)
+  
   return response
 
 def addSongToPlaylist(playlistID, songID, accessToken):
