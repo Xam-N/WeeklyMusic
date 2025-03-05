@@ -15,15 +15,25 @@ def runner():
   playlistName = now.strftime("%d - %m")
   
   playlistID = SpotifyPlaylistGenerator.createPlaylist(accessToken, playlistName)
-    
+
+  failedSongs = [] #List of songs I was unable to find on spotify
   for song in songList:
-    #print(song)
+    print(f"Song Name: {song}")
     #print(SpotifyPlaylistGenerator.findSongID(song, accessToken).json())
-    songID = SpotifyPlaylistGenerator.findSongID(song, accessToken).json()['tracks']['items'][0]['id']
-    #print(songID)
+    try:
+      songID = SpotifyPlaylistGenerator.findSongID(song, accessToken).json()['tracks']['items'][0]['id']
+    except:
+      failedSongs.append(song)
+      print("Failed to find song")
+      
+    #print(f"SongID: {songID}")
     SpotifyPlaylistGenerator.addSongToPlaylist(playlistID,songID,accessToken)
+
+
+  print(f"Failed to add the following songs \n {failedSongs}")
   
   os._exit(0)
+  
   
 
 runner()

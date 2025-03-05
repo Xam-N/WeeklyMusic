@@ -102,7 +102,12 @@ def findSongID(songToSearch, accessToken):
   header = {
     "Authorization":f"Bearer {accessToken}"
   }
+  
   response = requests.get(url,params=params,headers=header)
+  
+  if response.json()['tracks']['total'] == '0':
+    print(f"Failed to find {songTitle} {artistName}")
+    return None
   
   return response
 
