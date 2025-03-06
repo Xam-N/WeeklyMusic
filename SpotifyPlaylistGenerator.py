@@ -5,35 +5,15 @@ import threading
 import requests
 import base64
 import datetime
-import apiKeys
-
-app = flask.Flask(__name__)
+from runner import website #imports flask application from main
+from apiKeys import spotifyClientID, spotifyClientSecret
 
 authCode = None
-
-callback_event = threading.Event()
-
-clientID = apiKeys.spotifyClientID
-
-clientSecret = apiKeys.spotifyClientSecret
-
+clientID = spotifyClientID
+clientSecret = spotifyClientSecret
 redirectURI = 'http://localhost:8888/callback'
 
-def tokenGen():
-  
-  
-  threading.Thread(target=lambda: app.run(port=8888)).start()
-
-  webbrowser.open('http://localhost:8888/login')
-
-  callback_event.wait()
-  
-  accessToken = getKey(authCode, redirectURI,clientID,clientSecret)['access_token']
-  print(accessToken)
-  
-  return accessToken
-
-@app.route('/login')
+@website.route('/login')
 def login():
     scope = 'user-read-private playlist-modify-private'
     
@@ -46,29 +26,36 @@ def login():
     auth_url = f'https://accounts.spotify.com/authorize?{query_params}'
     return flask.redirect(auth_url)
 
-@app.route('/callback')
+@website.route('/callback')
 def callback():
-  global authCode
-  code = flask.request.args.get('code')
-  authCode = code
-  callback_event.set()
-  return code
+    global authCode
+    code = flask.request.args.get('code')
+    authCode = code
 
-def getKey(authCode,redirect_uri,clientID,clientSecret):
-  url = "https://accounts.spotify.com/api/token"
-  authString = clientID + ":" + clientSecret
-  authString = base64.b64encode(authString.encode()).decode()
-  data = {
-    "code": authCode,
-    "redirect_uri": redirect_uri,
-    "grant_type": "authorization_code"
-  }
-  headers = {
-    "content-type" : "application/x-www-form-urlencoded",
-    "Authorization" : "Basic " + authString
-  }
-  response = requests.post(url, headers=headers, data=data)
-  return response.json()
+    spotifyAccessToken = getKey(authCode, redirectURI, clientID, clientSecret)['access_token'] #gives access token, needed
+    print(spotifyAccessToken)
+    print("Doing stuff")
+    flask.session['spotifyAccessToken'] = spotifyAccessToken
+    return flask.redirect('/weeklyMusic')
+
+
+def getKey(authCode, redirect_uri, clientID, clientSecret):
+    url = "https://accounts.spotify.com/api/token"
+    authString = clientID + ":" + clientSecret
+    authString = base64.b64encode(authString.encode()).decode()
+    data = {
+        "code": authCode,
+        "redirect_uri": redirect_uri,
+        "grant_type": "authorization_code"
+    }
+    headers = {
+        "content-type": "application/x-www-form-urlencoded",
+        "Authorization": "Basic " + authString
+    }
+    response = requests.post(url, headers=headers, data=data)
+    return response.json()
+
+
 
 def createPlaylist(accessToken,playlistName):
     url = "https://api.spotify.com/v1/users/slothsinblack/playlists"

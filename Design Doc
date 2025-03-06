@@ -1,0 +1,12 @@
+Open a website where with the click of a button, I can generate my weekly music playlist. 
+
+
+
+
+
+/login
+/callback
+/tokenGen
+
+
+When button is pressed. I want to navigate to spotify login which goes to callback. Once Im at callback I have an authcode that I can use for the getkeys function
