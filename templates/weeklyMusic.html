@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Weekly Music Playlist</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/weeklyMusic.css') }}">
 </head>
 <body>
-    <h1>Welcome to the Weekly Music Page</h1>    
+    <div class="mainContainer">
+        <h1>Weekly Music Playlist</h1>
+        
+        <img id = "thumbnail"> Test <img>
+
+        <p id = "videoName"> Sample Video <p>
+        
+        <div class="w3-light-grey w3-round">
+            <div id="progressBar" class="w3-container w3-round w3-blue" style="width:0%">0%</div>
+        </div> 
+        
+        <p id = "recentSong"> <p>
+        <a href="/" class="button">Go Home</a>
+    </div>
 </body>
 </html>

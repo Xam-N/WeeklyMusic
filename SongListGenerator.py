@@ -45,12 +45,14 @@ def getVideo(videoID):
         "key":apiKey
     }
     response = requests.get(url, params=params)
-
-    return response.json()["items"][0]["snippet"]["description"]
+    description = response.json()["items"][0]["snippet"]["description"]
+    videoTitle = response.json()["items"][0]["snippet"]["title"]
+    videoThumbnail = response.json()["items"][0]["snippet"]["thumbnails"]
+    return description,videoTitle,videoThumbnail
 
 def SongList(): # returns this weeks best tracks
         
-    videoInfo = getVideo(searchForVideo(getChannelID(channelName),videoName)) # gives the description of the latest needledrop weekly video
+    videoInfo,videoTitle,videoThumbnail = getVideo(searchForVideo(getChannelID(channelName),videoName)) # gives the description of the latest needledrop weekly video
     #print(videoInfo)
     videoInfo = videoInfo.splitlines()
 
@@ -78,4 +80,4 @@ def SongList(): # returns this weeks best tracks
         if song == True and video != "":
             songList.append(video)
     #print(songList)
-    return songList
+    return songList,videoTitle,videoThumbnail

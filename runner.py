@@ -38,34 +38,34 @@ def get_token():
   
 @website.route("/weeklyMusic")
 def weeklyMusic():
-  
-  render_template("weeklyMusic.html")
-  
-  songList = SongListGenerator.SongList() # generates a song list from the youtube video
-  
-  accessToken = session.get('spotifyAccessToken')
-  
-  print(accessToken)
     
-  now = datetime.date.today()
-
-  playlistName = now.strftime("%d - %m")
-  
-  playlistID = SpotifyPlaylistGenerator.createPlaylist(accessToken, playlistName)
-  
   def generate():
-        """Streams updates to the client while looping"""
-        yield render_template("weeklyMusic.html", message="Processing playlist...")
+    yield render_template("weeklyMusic.html", message="Processing")
+    
+    songList,youtubeTitle,youtubeThumbnail = SongListGenerator.SongList() # generates a song list from the youtube video
+        
+    yield f'<p>{youtubeTitle}</p>'
+    yield f'<img src="{youtubeThumbnail["high"]["url"]}">'
+    
+    accessToken = session.get('spotifyAccessToken')
 
-        for song in songList:
-            songID = SpotifyPlaylistGenerator.findSongID(song, accessToken).json()['tracks']['items'][0]['id']
-            SpotifyPlaylistGenerator.addSongToPlaylist(playlistID, songID, accessToken)
+    print(accessToken)
 
-            # Send an update after processing each song
-            yield f"<p>Added song: {song}</p>\n"
+    now = datetime.date.today()
 
-        yield f'<p>{playlistName} created successfully!</p>'
-        yield '<a href="/" class="button">Go Home</a>'
+    playlistName = now.strftime("%d - %m")
+
+    playlistID = SpotifyPlaylistGenerator.createPlaylist(accessToken, playlistName)
+
+    for song in songList:
+        songID = SpotifyPlaylistGenerator.findSongID(song, accessToken).json()['tracks']['items'][0]['id']
+        SpotifyPlaylistGenerator.addSongToPlaylist(playlistID, songID, accessToken)
+
+        # Send an update after processing each song
+        yield f'<p class = "songTitles"> Added song: {song} </p>\n'
+
+    yield f'<p class = "success-message">{playlistName} Created successfully!</p>'
+    yield '<a href="/" class="button">Go Home</a>'
   
   
   return Response(stream_with_context(generate()), content_type='text/html')
