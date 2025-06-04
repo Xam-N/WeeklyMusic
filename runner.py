@@ -57,12 +57,15 @@ def weeklyMusic():
 
     playlistID = SpotifyPlaylistGenerator.createPlaylist(accessToken, playlistName)
 
+    progressBar = len(songList)
+
     for song in songList:
         songID = SpotifyPlaylistGenerator.findSongID(song, accessToken).json()['tracks']['items'][0]['id']
         SpotifyPlaylistGenerator.addSongToPlaylist(playlistID, songID, accessToken)
 
         # Send an update after processing each song
         yield f'<p class = "songTitles"> Added song: {song} </p>\n'
+        
 
     yield f'<p class = "success-message">{playlistName} Created successfully!</p>'
     yield '<a href="/" class="button">Go Home</a>'
@@ -70,4 +73,20 @@ def weeklyMusic():
   
   return Response(stream_with_context(generate()), content_type='text/html')
 #runner()
-  
+
+@website.route("\projectList")
+def project_list():
+  pass
+
+@website.route("\aboutMe")
+def about_Me():
+  pass
+
+@website.route("\socials")
+def socials():
+  pass
+
+@website.route("\socials")
+def workExperience():
+  pass
+
